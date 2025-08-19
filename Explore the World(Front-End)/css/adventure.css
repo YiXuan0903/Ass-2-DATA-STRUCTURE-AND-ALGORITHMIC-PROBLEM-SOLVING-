@@ -1,0 +1,223 @@
+body{
+    margin: 0;
+    background-color: white;
+}
+
+/* ===== HERO SECTION ANIMATION ===== */
+.hero {
+    background: url(../image/background.jpg) center/cover no-repeat;
+    text-align: center;
+    padding: 90px;
+    color: rgb(254, 54, 4);
+    font-size: 2em;
+    animation: fadeInHero 2s ease-in-out;
+}
+
+@keyframes fadeInHero {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation Bar */
+.navbar{
+    width:100%;
+    background-color: orange;
+    display: flex;
+    font-family: 'Times New Roman', serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;  
+}
+
+.navbar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width:100%;
+    display: flex;
+    overflow:hidden;
+}
+
+.navbar a{
+    text-decoration: none;
+    padding: 12px 15px;  /* Reduced padding */
+    display: block;
+    text-align: center;
+    font-size: 16px;  /* Default font size */
+}
+
+.navbar a:hover{
+    background-color:aqua;
+}
+
+.navbar li{
+    flex: 1;
+    text-align: center;
+}
+
+/* Navbar underline animation */
+.navbar a {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: black;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 80%;
+}
+
+/* Mobile adjustments: Resize font and padding further */
+@media (max-width: 768px) {
+    .navbar a {
+        font-size: 8px;  /* Further reduce font size */
+        padding: 0px 5px; /* Even smaller padding */
+    }
+    .navbar li {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+
+
+/* ===== SECTION TITLE ANIMATION ===== */
+.section-title {
+    color: #ff6600;
+    margin: 30px 0;
+    font-weight: times;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: fadeInScale 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInScale {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== CARD STYLING WITH ANIMATION ===== */
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(213, 145, 67, 0.482);
+    animation: fadeInCard 0.8s ease-in-out;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 0px 8px 16px rgba(227, 114, 44, 0.638);
+}
+
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-img-top,
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    border-bottom: 3px solid orange;
+}
+
+.card-body {
+    background-color: #fff;
+    padding: 20px;
+    text-align: left;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* ===== FOOTER ANIMATION ===== */
+footer {
+    background-color: orange;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+footer:hover {
+    animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ===== SOCIAL BUTTONS ANIMATION ===== */
+.social-buttons {
+    margin-top: 20px;
+}
+
+.social-buttons a {
+    margin: 0 10px;
+    border-radius: 5px;
+    padding: 6px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border: 1px solid white;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+.social-buttons a:hover {
+    background-color: white;
+    color: orange;
+    transform: scale(1.1);
+}
+
+/* ===== GRID SPACING ===== */
+.col-md-6 {
+    margin-bottom: 30px;
+}
+
+/* ===== MODAL IMAGE STYLING (OPTIONAL) ===== */
+.modal-body img {
+    width: 100%;
+    border-radius: 10px;
+}

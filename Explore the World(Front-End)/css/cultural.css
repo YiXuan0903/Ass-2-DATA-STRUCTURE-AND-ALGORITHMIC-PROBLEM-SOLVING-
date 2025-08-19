@@ -1,0 +1,271 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color:white;
+    color: #333;
+}
+
+.hero {
+    background: url(../image/culturalBackground.jpg) center/cover no-repeat;
+    text-align: center;
+    padding: 100px;
+    color: rgb(4, 172, 194);
+    font-size: 2em;
+    animation: fadeInTop 1.2s ease-in-out;
+}
+
+/* Base Styling */
+
+.container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* Navigation Bar */
+.navbar{
+    width:100%;
+    background-color: orange;
+    display: flex;
+    font-family: 'Times New Roman', serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;  
+}
+
+.navbar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width:100%;
+    display: flex;
+    overflow:hidden;
+}
+
+.navbar a{
+    text-decoration: none;
+    padding: 12px 15px;  /* Reduced padding */
+    display: block;
+    text-align: center;
+    font-size: 16px;  /* Default font size */
+}
+
+.navbar a:hover{
+    background-color:aqua;
+}
+
+.navbar li{
+    flex: 1;
+    text-align: center;
+}
+
+/* Navbar underline animation */
+.navbar a {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: black;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 80%;
+}
+
+/* Mobile adjustments: Resize font and padding further */
+@media (max-width: 768px) {
+    .navbar a {
+        font-size: 8px;  /* Further reduce font size */
+        padding: 0px 5px; /* Even smaller padding */
+    }
+    .navbar li {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+/* Section Title */
+.section-title {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: orange;
+    font-size: 2rem;
+    opacity: 0;
+    transform: scale(0.95);
+    animation: zoomIn 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 10px;
+    animation: fadeInCard 0.8s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(255, 98, 0, 0.638);
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+
+.card img {
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+    border-bottom: 3px solid orange;
+}
+
+.card-body {
+    background-color: #fff;
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Modal Styling */
+.modal-body {
+    background-color: #f5f5f5;
+    padding: 30px;
+    animation: fadeModal 0.5s ease;
+}
+
+.modal-header {
+    background-color: orange;
+    color: white;
+    padding: 15px;
+    animation: fadeModal 0.5s ease;
+}
+
+.modal-title {
+    font-size: 1.75rem;
+}
+
+.modal-footer {
+    border-top: 1px solid #ddd;
+    padding: 10px;
+    animation: fadeModal 0.5s ease;
+}
+
+/* Grid Spacing */
+.col-md-6 {
+    margin-bottom: 30px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: orange;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+footer:hover {
+    animation: bounceFooter 0.8s ease;
+}
+
+/* Social Buttons */
+.social-buttons {
+    margin-top: 20px;
+}
+
+.social-buttons a {
+    margin: 0 10px;
+    border-radius: 5px;
+    padding: 6px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border: 1px solid white;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+.social-buttons a:hover {
+    background-color: white;
+    color: orange;
+    transform: scale(1.1);
+}
+
+/* Modal Image Styling */
+.modal-body img {
+    border-radius: 10px;
+}
+
+/* ======================= */
+/*      ANIMATION KEYFRAMES     */
+/* ======================= */
+
+@keyframes fadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceFooter {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes fadeModal {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

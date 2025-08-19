@@ -1,0 +1,18 @@
+Red Chilli
+A222562Q
+1.30 2.00
+Japanese Sweet Potatoes
+B807729E
+4.99 1.80
+Parsley
+G600342k
+15.00 1.20
+Green Apple
+ABC7777
+20.00 1.5
+Carrot
+C854679T
+5.20 3.00
+Orange
+P235657O
+3.50 3.00

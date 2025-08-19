@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Paris, France</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/food.css">
+    <script defer src="../js/food.js"></script>
+</head>
+
+<body>
+    <header class="hero animated animate-fade-in">
+        <h1>Lets try Paris's cuisine!</h1>
+    </header>
+
+    <section class="container mt-5 animated animate-slide-up">
+        <h2 class="text-center">Popular Dishes in Paris</h2>
+        <div class="row">
+            <section class="food-grid">
+                <div class="food-card" data-dish="Crêpes and Galettes" data-default-rating="4.2">
+                    <img src="../image/Crêpes_and_Galettes.jpg" alt="Crêpes and Galettes">
+                    <h3>Crêpes and Galettes</h3>
+                    <p>
+                        Sometimes, less is more, especially when it comes to the iconic French crêpes and galettes, made
+                        from a simple batter of
+                        flour, water, and salt. The delicious toppings—such as cheese, ham, mushrooms, and eggs, as well
+                        as salted caramel and
+                        butter—elevate the dining experience and make these dishes beloved by locals.Sometimes, less is
+                        more, especially when it comes to the iconic French crêpes and galettes, made from a simple
+                        batter of
+                        flour, water, and salt. The delicious toppings—such as cheese, ham, mushrooms, and eggs, as well
+                        as salted caramel and
+                        butter—elevate the dining experience and make these dishes beloved by locals.
+                    </p>
+
+                    <div class="rating">
+                        <span class="star" data-rating="1">☆</span>
+                        <span class="star" data-rating="2">☆</span>
+                        <span class="star" data-rating="3">☆</span>
+                        <span class="star" data-rating="4">☆</span>
+                        <span class="star" data-rating="5">☆</span>
+                    </div>
+                    <p class="average-rating">Average Rating: <span id="avg-rating-Crêpes and Galettes">0.0</span></p>
+                    <button class="save-btn" data-dish="Crêpes and Galettes">Save to Favorites</button>
+                </div>
+
+                <div class="food-card" data-dish="French onion soup" data-default-rating="4.6">
+                    <img src="../image/French_onion_soup.jpg" alt="French onion soup">
+                    <h3>French onion soup</h3>
+                    <p>
+                        This hearty dish features caramelized onions simmered in a rich beef broth, creating a deep,
+                        flavorful base. It is then topped
+                        with a thick layer of melted cheese and a slice of crispy bread, making it the ultimate comfort
+                        food that you simply must try.
+                    </p>
+                    <div class="rating">
+                        <span class="star" data-rating="1">☆</span>
+                        <span class="star" data-rating="2">☆</span>
+                        <span class="star" data-rating="3">☆</span>
+                        <span class="star" data-rating="4">☆</span>
+                        <span class="star" data-rating="5">☆</span>
+                    </div>
+                    <p class="average-rating">Average Rating: <span id="avg-rating-French onion soup">0.0</span></p>
+                    <button class="save-btn" data-dish="French onion soup">Save to Favorites</button>
+                </div>
+
+                <div class="food-card" data-dish="The classic French baguette" data-default-rating="4.0">
+                    <img src="../image/The_classic_French_baguette.jpg" alt="The classic French baguette">
+                    <h3>The classic French baguette</h3>
+                    <p>
+                        The trip to Paris would be incomplete without tasting the classic French baguette. This crispy,
+                        golden bread is a symbol
+                        of French baking, and Parisian bakeries compete to make the best baguette.
+                    </p>
+                    <div class="rating" data-dish="3">
+                        <span class="star" data-rating="1">☆</span>
+                        <span class="star" data-rating="2">☆</span>
+                        <span class="star" data-rating="3">☆</span>
+                        <span class="star" data-rating="4">☆</span>
+                        <span class="star" data-rating="5">☆</span>
+                    </div>
+                    <p class="average-rating">Average Rating: <span id="avg-rating-The classic French baguette">0.0</span>
+                    </p>
+                    <button class="save-btn" data-dish="The classic French baguette">Save to Favorites</button>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <button onclick="goBack()" class="back-button">Back to Food & Cuisine page</button>
+</body>
+
+</html>

@@ -1,0 +1,191 @@
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Explorer the World</title>
+            <link rel="stylesheet" href="/css/homePage.css">
+        </head>
+        <body onload="checkLoginStatus()">
+            <script>
+                function checkLoginStatus() {
+                    const user = sessionStorage.getItem("loggedInUser");
+                    if (!user) {
+                        alert("You are not logged in. Please sign up and log in first.");
+                        window.location.href = "signup.html";
+                    }
+                }
+            
+                function logout() {
+                    sessionStorage.removeItem("loggedInUser");
+                    localStorage.removeItem("loggedInUser"); 
+                    alert("Logged out successfully.");
+                    window.location.href = "index.html"; 
+                }
+            </script>
+
+                <div class="user-dropdown">
+                    <div class="dropdown">
+                        <button>User</button>
+                        <div class="dropdown-content">
+                            <a href="signup.html">Sign Up</a>
+                            <a href="index.html">Log In</a>
+                            <a href="#" onclick="logout()">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="background-title">
+                <h1 id="title1" title="explore world">Explore the World</h1>
+            </div>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="homePage.html">Home</a></li>
+                    <li><a href="destination.html">Destination</a></li>
+                    <li><a href="tips.html">Travel Tips</a></li>
+                    <li><a href="cultural.html">Cultural Highlight</a></li>
+                    <li><a href="adventure.html">Adventure & Activities</a></li>
+                    <li><a href="food&cuisine.html">Food & Cuisine</a></li>
+                    <li><a href="experience.html">Travel Blog & Experiences</a></li>
+                    <li><a href="contact.html">About Us</a></li>
+                </ul>
+            </nav>
+
+            <div id="title2">
+                <h1>"Discover the World’s Most Breathtaking Places"</h1>
+                <h2>Unforgettable travel experiences, tips, and guides for your next adventure.</h2>
+            </div>
+
+            <div class="video-container">
+                <video controls autoplay loop muted>
+                    <source src="/media/scene.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <div class="image1-container">
+                <img src="/image/travelimage.jpg" height="300px" style="margin-right: 3%;" >
+                <h3 style="max-width: 600px; text-align: justify;">
+                    Your ultimate travel companion dedicated to helping adventurers discover amazing destinations, 
+                    must-have travel tips, cultural highlights, thrilling activities and mouth-watering cuisine around the world. 
+                    Whether you're a seasoned traveler or just starting out, we offer expert insights, travel guides and personal experiences to inspire your next trip.
+                </h3>
+            </div>
+
+            
+            <h1 style="text-align: center;">Top 3 destination </h1>
+
+            <div class="image-container">
+                    <div class="destination">
+                        <a href="#" target="_blank"></a>
+                        <img src="/image/paris.jpg" height="300">
+                        <p>Paris, France - The City of Love</p>
+                    </div>
+                    <div class="destination">
+                        <a href="#" target="_blank"></a>
+                        <img src="/image/newyork.jpg" height="300">
+                        <p>New York, USA - The Big Apple</p>
+                    </div>
+                    <div class="destination">
+                        <a href="#" target="_blank"></a>
+                        <img src="/image/italy.jpg" height="300">
+                        <p>Italy - A Land of History & Beauty</p>
+                    </div>
+            </div>
+
+            <script>
+                function setCookie(name, value, days) {
+                    let expires = "";
+                    if (days) {
+                        const date = new Date();
+                        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                        expires = "; expires=" + date.toUTCString();
+                    }
+                    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+                }
+            
+                function getCookie(name) {
+                    const nameEQ = name + "=";
+                    const ca = document.cookie.split(';');
+                    for (let i = 0; i < ca.length; i++) {
+                        let c = ca[i].trim();
+                        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
+                    }
+                    return null;
+                }
+            
+                
+                function acceptCookies() {
+                    localStorage.setItem("cookieConsent", "accepted");
+                    setCookie("cookieChoice", "accepted", 7); 
+                    document.getElementById("cookie-consent").style.display = "none";
+
+                    const username = sessionStorage.getItem("loggedInUser");
+                    if (username) {
+                        alert("Welcome, " + username.charAt(0).toUpperCase() + username.slice(1) + "!");
+                    } else 
+                    runPersonalizedFeatures();
+                }
+
+            
+                function declineCookies() {
+                    localStorage.setItem("cookieConsent", "declined");
+                    setCookie("cookieChoice", "declined", 7); 
+                    document.getElementById("cookie-consent").style.display = "none";
+                    console.log("User declined cookies.");
+                }
+            
+                function checkLoginStatus() {
+                    const user = sessionStorage.getItem("loggedInUser");
+                    if (!user) {
+                        alert("You are not logged in. Please sign up and log in first.");
+                        window.location.href = "signup.html";
+                    }
+                }
+            
+                function runPersonalizedFeatures() {
+                    const username = sessionStorage.getItem("loggedInUser");
+                    if (username) {
+                        console.log("Welcome back, " + username);
+                    }
+
+                    // LocalStorage tracking only if accepted
+                    if (localStorage.getItem("visits")) {
+                        let count = parseInt(localStorage.getItem("visits")) + 1;
+                        localStorage.setItem("visits", count);
+                        console.log("You have visited this page " + count + " times.");
+                    } else {
+                        localStorage.setItem("visits", 1);
+                        console.log("This is your first visit.");
+                    }
+
+                    const startTime = new Date().toLocaleTimeString();
+                    sessionStorage.setItem("sessionStart", startTime);
+                    console.log("Session started at: " + startTime);
+                }
+
+            
+                window.onload = function () {
+                    checkLoginStatus();
+            
+                    const consent = localStorage.getItem("cookieConsent");
+            
+                    if (!consent) {
+                        document.getElementById("cookie-consent").style.display = "flex";
+                    } else if (consent === "accepted") {
+                        runPersonalizedFeatures();
+                    } else {
+                        console.log("Personalization is off (cookieConsent: declined)");
+                    }
+                };
+            </script>
+            
+            
+            
+            
+            <div id="cookie-consent" class="cookie-banner" style="display: none;">
+                <p>This site uses cookies to improve your experience. Do you accept cookies?</p>
+                <button onclick="acceptCookies()">Accept</button>
+                <button onclick="declineCookies()">Decline</button>
+            </div>
+            
+        </body>
+    </html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rome, Italy</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/food.css">
+    <script defer src="../js/food.js"></script>
+</head>
+
+<body>
+    <header class="hero animated animate-fade-in">
+        <h1>Lets try Rome's cuisine!</h1>
+    </header>
+
+    <section class="container mt-5 animated animate-slide-up">
+        <h2 class="text-center">Popular Dishes in Rome</h2>
+        <div class="row">
+            <section class="food-grid">
+                <div class="food-card" data-dish="Pasta alla Carbonara" data-default-rating="4.9">
+                    <img src="../image/Pasta_alla_Carbonara.jpg" alt="Pasta alla Carbonara">
+                    <h3>Pasta alla Carbonara</h3>
+                    <p> 
+                        Fry thick-cut guanciale (cured pork cheek) until the fat renders. In a separate bowl, whisk together egg yolks and 
+                        plenty of Pecorino Romano cheese, seasoning with a generous amount of black pepper. Combine everything with freshly 
+                        cooked, drained pasta (spaghetti, tonnarelli, or rigatoni work best), ensuring the heat is off to create a creamy, 
+                        rich sauce without scrambling the eggs.
+                    </p>
+
+                    <div class="rating">
+                        <span class="star" data-rating="1">☆</span>
+                        <span class="star" data-rating="2">☆</span>
+                        <span class="star" data-rating="3">☆</span>
+                        <span class="star" data-rating="4">☆</span>
+                        <span class="star" data-rating="5">☆</span>
+                    </div>
+                    <p class="average-rating">Average Rating: <span id="avg-rating-Pasta alla Carbonara">0.0</span></p>
+                    <button class="save-btn" data-dish="Pasta alla Carbonara">Save to Favorites</button>
+                </div>
+
+                <div class="food-card" data-dish="Carciofi_alla_Romana_e_Carciofi_alla_Giudia" data-default-rating="4.6">
+                    <img src="../image/Carciofi_alla_Romana_e_Carciofi_alla_Giudia(Roman_and_Jewish_artichokes).jpg" alt="Carciofi alla Romana e Carciofi alla Giudia (Roman and Jewish artichokes)">
+                    <h3>Carciofi alla Romana e Carciofi alla Giudia (Roman and Jewish artichokes)</h3>
+                    <p>
+                        There are 2 ways to cook this cuisine. The first style is called Carciofi alla Romana—artichokes are trimmed, stuffed with 
+                        mint, garlic, and parsley, then gently braised in a mixture of olive oil, white wine, and water. As the liquid evaporates, 
+                        the artichokes become tender and infused with the delicate flavors of the cooking wine.
+
+                        The second style is Carciofi alla Giudia—the Jewish-style artichoke, synonymous with Rome’s historic Jewish Quarter. After 
+                        careful trimming, the artichoke is flattened so its leaves open like a flower, then deep-fried whole. When it emerges from 
+                        the hot oil, it is both crispy and golden on the outside, yet soft and flavorful on the inside.  
+                    </p>
+                    <div class="rating">
+                        <span class="star" data-rating="1">☆</span>
+                        <span class="star" data-rating="2">☆</span>
+                        <span class="star" data-rating="3">☆</span>
+                        <span class="star" data-rating="4">☆</span>
+                        <span class="star" data-rating="5">☆</span>
+                    </div>
+                    <p class="average-rating">Average Rating: <span id="avg-rating-Carciofi_alla_Romana_e_Carciofi_alla_Giudia">0.0</span></p>
+                    <button class="save-btn" data-dish="Carciofi_alla_Romana_e_Carciofi_alla_Giudia">Save to Favorites</button>
+                </div>
+
+                <div class="food-card" data-dish="Maritozzi" data-default-rating="5.0">
+                    <img src="../image/Maritozzi.jpg" alt="Maritozzi">
+                    <h3>Maritozzi</h3>
+                    <p>
+                        A large, fluffy sweet bread, filled with lightly sweetened fresh cream and often enriched with pine nuts, raisins, 
+                        and candied orange peel.
+                    </p>
+                    <div class="rating">
+                        <span class="star" data-rating="1">☆</span>
+                        <span class="star" data-rating="2">☆</span>
+                        <span class="star" data-rating="3">☆</span>
+                        <span class="star" data-rating="4">☆</span>
+                        <span class="star" data-rating="5">☆</span>
+                    </div>
+                    <p class="average-rating">Average Rating: <span id="avg-rating-Maritozzi">0.0</span></p>
+                    <button class="save-btn" data-dish="Maritozzi">Save to Favorites</button>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <button onclick="goBack()" class="back-button">Back to Food & Cuisine page</button>
+</body>
+
+</html>

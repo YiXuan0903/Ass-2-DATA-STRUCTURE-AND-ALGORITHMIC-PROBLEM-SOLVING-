@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>About Us</title>
+        <link rel="stylesheet" href="/css/contact.css">
+    </head>
+    <body>
+        <h1 id="header1" title="about us" >About Us</h1>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="homePage.html">Home</a></li>
+                <li><a href="destination.html">Destination</a></li>
+                <li><a href="tips.html">Travel Tips</a></li>
+                <li><a href="cultural.html">Cultural Highlight</a></li>
+                <li><a href="adventure.html">Adventure & Activities</a></li>
+                <li><a href="food&cuisine.html">Food & Cuisine</a></li>
+                <li><a href="experience.html">Travel Blog & Experiences</a></li>
+                <li><a href="contact.html">About Us</a></li>
+            </ul>
+        </nav>
+
+        <div class="reveal">
+
+            <object data="/image/animation.gif" width="800" height="500" class="animation"></object>
+       
+        </div>
+
+        <div class="reveal">
+
+            <h1>Why Choose Us?</h1>
+
+            <div class="choose">
+                <img src="/image/choose.jpg" alt="choose us" class="image1">
+                <div class="description">
+                    <p><strong>1. Personalized Service</strong></p>
+                    <ul>
+                        <li>Listen to your preferences and plan a packages for you.</li>
+                        <li>Depend on your interest and comfort level and schedule a best plan for your trip.</li>
+                        <li>So that your travel trip can be more enjoyable.</li>
+                    </ul>
+                </div>       
+            </div>
+
+        </div>
+
+        <div class="reveal">
+
+            <div class="reason">
+                <img src="/image/excited.jpg" alt="excited" class="image2">
+                <div class="description0">
+                    <p><strong>2. Expertise and Deep Knowledge</strong></p>
+                    <ul>
+                        <li>We work with reliable local partners and guides who know about the culture of country and know the wonderful place that are not mentioned in guides book.</li>
+                        <li>This can help you to avoid tourist traps.</li>
+                        <li>We can also help you to find a unique activities and make you have an unforgettable trips.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="reveal">
+
+            <div class="center-image">
+                <div class="image-wrapper">
+                    <img src="/image/background.png" alt="background">
+                    <div class="text-over-image">
+                        <h3>Business Hour</h3>
+                        <p>Monday : 8.00am - 5.00pm</p>
+                        <p>Tuesday : 8.00am - 5.00pm</p>
+                        <p>Wednesday : 8.00am - 5.00pm</p>
+                        <p>Thursday : 8.00am - 5.00pm</p>
+                        <p>Friday : 8.00am - 5.00pm</p>
+                        <p>Saturday : 8.00am - 1.00pm</p>
+                        <p>Sunday : Closed</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="reveal">
+            <h1>Contact Us! 📧</h1>
+            <p class="email">Click <a href="mailto:chingyinkean@1utar.my">HERE</a>! Thank you for supporting us! You can also give some feedback.😁</p>
+        </div>
+
+        <script>
+            function revealOnScroll() {
+              const reveals = document.querySelectorAll(".reveal");
+          
+              reveals.forEach(el => {
+                const windowHeight = window.innerHeight;
+                const elementTop = el.getBoundingClientRect().top;
+                const elementBottom = el.getBoundingClientRect().bottom;
+          
+                if (elementTop < windowHeight && elementBottom > 0) {
+                  el.classList.add("active");
+                } else {
+                  el.classList.remove("active"); // remove it when it's out of view
+                }
+              });
+            }
+          
+            window.addEventListener("scroll", revealOnScroll);
+            window.addEventListener("load", revealOnScroll);
+        </script>          
+                 
+    </body>
+</html>

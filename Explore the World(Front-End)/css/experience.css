@@ -1,0 +1,210 @@
+/* Reset default margins */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', serif;
+}
+.background-title {
+    background-image: url(../image/experience.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    text-align: center;
+    color: white;
+  }
+/* Center the title */
+header h1 {
+    text-align: center;
+    font-family: 'Palace Script MT', cursive;
+    font-style: italic;
+    font-size: 4.5em;
+    color: black;
+    margin: 20px 0;
+}
+
+/* Navigation Bar */
+.navbar{
+    width:100%;
+    background-color: orange;
+    display: flex;
+    font-family: 'Times New Roman', serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;  
+}
+.navbar ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    width:100%;
+    display: flex;
+    overflow:hidden;
+}
+.navbar a{
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color:aqua;
+}
+.navbar li{
+    flex: 1;
+    text-align: center;
+}
+
+
+/* Blog Section */
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.blog-post {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+.blog-post img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.blog-post h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.blog-post p {
+    font-size: 1em;
+    color: #555;
+}
+
+.blog-post a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+}
+
+.blog-post a:hover {
+    text-decoration: underline;
+}
+.blog-post {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.blog-post:nth-child(1) { animation-delay: 0.2s; }
+.blog-post:nth-child(2) { animation-delay: 0.3s; }
+.blog-post:nth-child(3) { animation-delay: 0.4s; }
+.blog-post:nth-child(4) { animation-delay: 0.5s; }
+.blog-post:nth-child(5) { animation-delay: 0.6s; }
+.blog-post:nth-child(6) { animation-delay: 0.7s; }
+.blog-post:nth-child(7) { animation-delay: 0.8s; }
+.blog-post:nth-child(8) { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image zoom */
+.blog-post img {
+    transition: transform 0.3s ease;
+}
+.blog-post img:hover {
+    transform: scale(1.05);
+}
+
+.blog-post p[id] {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.6s ease, opacity 0.6s ease;
+    opacity: 0;
+}
+
+.blog-post p[id].show {
+    max-height: 500px; 
+    opacity: 1;
+}
+
+/* Navbar underline animation */
+.navbar a {
+    position: relative;
+    overflow: hidden;
+}
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: black;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+.navbar a:hover::after {
+    width: 80%;
+}
+
+/* ===== FOOTER ANIMATION ===== */
+footer {
+    background-color: orange;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+footer:hover {
+    animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ===== SOCIAL BUTTONS ANIMATION ===== */
+.social-buttons {
+    margin-top: 20px;
+}
+
+.social-buttons a {
+    margin: 0 10px;
+    border-radius: 5px;
+    padding: 6px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border: 1px solid white;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+.social-buttons a:hover {
+    background-color: white;
+    color: orange;
+    transform: scale(1.1);
+}
+
+

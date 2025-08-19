@@ -1,0 +1,407 @@
+/*------------hero section--------------*/
+.hero {
+    background-image: url(../image/skyview.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+/*------------container--------------*/
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.col-md-6 {
+    margin-bottom: 30px;
+}
+
+/*------------food card & buttons--------------*/
+.food-card {
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 15px;
+    overflow: visible;
+}
+
+.food-card h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.food-card p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+.food-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.food-card button {
+    margin-top: auto;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.food-card button:hover {
+    background-color: #ff4500;
+}
+
+.food-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.food-card .rating {
+    margin-top: 10px;
+}
+
+.food-card .average-rating {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/*------------star rating--------------*/
+.rating .star::before {
+    content: '★';
+    font-size: 30px;
+    color: #f8c88b;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.rating .star {
+    font-size: 30px;
+    cursor: pointer;
+    color: #f8c88b;
+    transition: color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    position: relative;
+    text-shadow: none;
+    box-shadow: none;
+}
+
+.food-card .star:hover {
+    color: #ffd700;
+}
+
+.rating .star.selected {
+    color: gold;
+    transform: scale(1.1);
+}
+
+.rating .star:hover {
+    color: #f3aa73;
+    transform: scale(1.1);
+}
+
+.rating .star:hover::before {
+    background-position: 0 0;
+}
+
+.rating .star:active {
+    color: #ffcc00;
+    transform: scale(1.3);
+}
+
+.average-rating {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/*------------back button--------------*/
+.back-button {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff6600;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+}
+
+.back-button:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+
+.back-button:active {
+    background-color: #ff3300;
+    transform: scale(0.95);
+}
+
+/*------------save button--------------*/
+.save-btn {
+    margin-top: auto;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.save-btn:hover {
+    background-color: #ff4500;
+    transform: scale(1.05);
+}
+
+/* Navigation Bar */
+.navbar{
+    width:100%;
+    background-color: orange;
+    display: flex;
+    font-family: 'Times New Roman', serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;  
+}
+
+.navbar ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width:100%;
+    display: flex;
+    overflow:hidden;
+}
+
+.navbar a{
+    text-decoration: none;
+    padding: 12px 15px;  /* Reduced padding */
+    display: block;
+    text-align: center;
+    font-size: 16px;  /* Default font size */
+}
+
+.navbar a:hover{
+    background-color:aqua;
+}
+
+.navbar li{
+    flex: 1;
+    text-align: center;
+}
+
+/* Navbar underline animation */
+.navbar a {
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: black;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 80%;
+}
+
+/* Mobile adjustments: Resize font and padding further */
+@media (max-width: 768px) {
+    .navbar a {
+        font-size: 8px;  /* Further reduce font size */
+        padding: 0px 5px; /* Even smaller padding */
+    }
+    .navbar li {
+        flex: 1;
+        text-align: center;
+    }
+}
+
+/*------------animation--------------*/
+.animated {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.animate-fade-in {
+    animation-name: fadeIn;
+}
+
+.animate-slide-up {
+    animation-name: slideUp;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*------------responsive design--------------*/
+@media (max-width: 768px) {
+    .food-card {
+        margin: 0 auto 20px;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .back-button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+}
+
+/*------------footer--------------*/
+footer {
+    background-color: orange;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+footer:hover {
+    animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/*------------social button--------------*/
+.social-buttons {
+    margin-top: 20px;
+}
+
+.social-buttons a {
+    margin: 0 10px;
+    border-radius: 5px;
+    padding: 6px 12px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border: 1px solid white;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+.social-buttons a:hover {
+    background-color: white;
+    color: orange;
+    transform: scale(1.1);
+}
+
+
+/*------------modal image--------------*/
+.modal-body img {
+    width: 100%;
+    border-radius: 10px;
+}

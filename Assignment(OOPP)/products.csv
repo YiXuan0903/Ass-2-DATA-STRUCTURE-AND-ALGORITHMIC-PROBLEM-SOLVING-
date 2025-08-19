@@ -1,0 +1,7 @@
+Type,ItemNumber,ProductName,Quantity,Price,Status,Extra1,Extra2,Extra3
+Refrigerator,1001,LG Fridge,10,1500,Active,Double Door,White,350
+TV,2001,Samsung LED,5,2000,Active,LED,1080p,55
+Refrigerator,1002,Sony Cool,0,1200,Discontinued,Single Door,Silver,250
+TV,2002,Panasonic UHD,2,3500,Active,UHD,4K,65
+Aircond,3001,CoolMaster 3000,10,1500,Active,12000,3,White
+Aircond,3002,AirFlow Pro,5,2000,Active,15000,4,Silver

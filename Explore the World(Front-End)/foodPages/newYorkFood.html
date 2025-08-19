@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>New York, USA</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/food.css">
+    <script defer src="../js/food.js"></script>
+</head>
+
+<body>
+    <header class="hero animated animate-fade-in">
+        <h1>Let's try New York's cuisine!</h1>
+    </header>
+
+    <section class="container mt-5 animated animate-slide-up">
+        <h2 class="text-center">Popular Dishes in New York</h2>
+        <div class="row">
+            <section class="food-grid">
+                    <div class="food-card" data-dish="BagelWithCreamCheeseAndLox" data-default-rating="5.0">
+                        <img src="../image/BagelWithCreamCheeseAndLox.jpg" alt="Bagel with cream cheese and lox">
+                        <h3>Bagel with Cream Cheese and Lox</h3>
+                        <p>
+                            This is a combination of cream cheese, smoked salmon, capers, tomatoes, and red onions, all
+                            piled onto a bagel.
+                            Today, bagels have become an essential part of New York City's culinary scene.
+                        </p>
+                        <div class="rating">
+                            <span class="star" data-rating="1">☆</span>
+                            <span class="star" data-rating="2">☆</span>
+                            <span class="star" data-rating="3">☆</span>
+                            <span class="star" data-rating="4">☆</span>
+                            <span class="star" data-rating="5">☆</span>
+                        </div>
+                        <p class="average-rating">Average Rating: <span
+                                id="avg-rating-BagelWithCreamCheeseAndLox">0.0</span></p>
+                        <button class="save-btn" data-dish="BagelWithCreamCheeseAndLox">Save to Favorites</button>
+                    </div>
+                    
+                        <div class="food-card" data-dish="PastramiOnRye" data-default-rating="4.5">
+                        <img src="../image/Pastrami_on_Rye.jpg" alt="Pastrami on Rye">
+                        <h3>Pastrami on Rye</h3>
+                        <p>
+                            Pastrami on rye is deeply rooted in Jewish deli traditions, embodying New York’s vibrant
+                            culinary scene.
+                            The combination of tender, smoky pastrami with bold mustard on hearty rye bread is a
+                            timeless classic, originating
+                            from iconic delis.
+                        </p>
+                        <div class="rating">
+                            <span class="star" data-rating="1">☆</span>
+                            <span class="star" data-rating="2">☆</span>
+                            <span class="star" data-rating="3">☆</span>
+                            <span class="star" data-rating="4">☆</span>
+                            <span class="star" data-rating="5">☆</span>
+                        </div>
+                        <p class="average-rating">Average Rating: <span id="avg-rating-PastramiOnRye">0.0</span></p>
+                        <button class="save-btn" data-dish="PastramiOnRye">Save to Favorites</button>
+                    </div>
+                   
+                        <div class="food-card" data-dish="Cronut" data-default-rating="4.0">
+                        <img src="../image/Cronut.jpg" alt="Cronut">
+                        <h3>Cronut</h3>
+                        <p>
+                            In the spring of 2013, French pastry genius Dominique Ansel revolutionized the pastry world
+                            at his SoHo bakery. It was
+                            then that he came up with the idea of combining a croissant and a donut. Thus, the Cronut
+                            dubbed the "mad scientist" of
+                            pastries was born.
+                        </p>
+                        <div class="rating" data-dish="NewYork,USA">
+                            <span class="star" data-rating="1">☆</span>
+                            <span class="star" data-rating="2">☆</span>
+                            <span class="star" data-rating="3">☆</span>
+                            <span class="star" data-rating="4">☆</span>
+                            <span class="star" data-rating="5">☆</span>
+                        </div>
+                        <p class="average-rating">Average Rating: <span id="avg-rating-Cronut">0.0</span></p>
+                        <button class="save-btn" data-dish="Cronut">Save to Favorites</button>
+                    </div>
+            </section>
+        </div>
+    </section>
+
+    <button onclick="goBack()" class="back-button">Back to Food & Cuisine page</button>
+</body>
+
+</html>
